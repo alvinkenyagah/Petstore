@@ -10,6 +10,12 @@ from . import main
 def index():
     msg= 'heeloo'
     return render_template('index.html',msg=msg)
+
+
 @main.route('/quiz',methods=['GET','POST'])
 def quiz():
     return render_template('quiz.html')
+
+@main.route('/product',methods=['GET','POST'])
+def product():
+    return render_template('products.html')
