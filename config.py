@@ -2,7 +2,7 @@
 import os 
 
 class Config:
-    ECRET_KEY = 'voke'
+    SECRET_KEY = 'voke'
     SQLALCHEMY_TRACK_MODIFICATIONS= True
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1421@localhost/petstore'
     UPLOADED_PHOTOS_DEST ='app/static/photos'

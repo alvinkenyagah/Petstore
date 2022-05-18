@@ -14,7 +14,7 @@ def index():
 
 
 @main.route('/quiz',methods=['GET','POST'])
-@login_required
+
 def quiz():
     return render_template('quiz.html')
 
