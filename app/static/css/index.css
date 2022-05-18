@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+/* ******************************navbar */
+.navbar {
+  padding: 0;
+  background-color: #bfcfff;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+/* .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #ffb03b;
+} */
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+/* *********************end navbar */
+
+
+/* **********************QUIZ****************************** */
+/*  */
+#main{
+  background-image: url(../img/back.jpg);
+  background-repeat:no-repeat;
+  padding-top:1vw;
+  }
+h1 {
+  text-align: center;
+  color:black;
+}
+
+#quiz-title {
+  margin-top: 2vw;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-family:"futura-pt";
+}
+
+.quiz {
+  padding: 1vw;
+  font-size:1.2vw;
+}
+
+.results {
+  display: none;
+}
+
+.btn {
+  border-color: rgba(28, 89, 180, 0.29);
+  background-color: rgba(10, 132, 233, 0.29);
+}
+.container{
+  display:flex;
+  
+  
+}
+.panel-msg{
+  font-size:2vw;
+  font-family: 'Caveat Brush', cursive;
+
+}
+#dog img,#cat img,#rabbit img{
+  width:50vw;
+  height:70vh;
+  border-radius:3vw;
+
+}
+ @media (max-width:1080px) and (min-width: 620px) {
+  .container{
+    display:flex;
+   
+    
+  }
+  .panel-msg{
+    font-size:2vw;
+    font-family: 'Caveat Brush', cursive;
+  
+  }
+  #dog img,#cat img,#rabbit img{
+    width:50vw;
+    height:70vh;
+    border-radius:3vw;
+  
+  }
+}
+@media screen and (max-width:700px){
+  .container{
+    display:block;
+
+  }
+  .quiz {
+    padding: 1vw;
+    font-size:1.8vw;
+  }
+  #dog img,#cat img,#rabbit img{
+    width:90vw;
+    height:100vh;
+    border-radius:3vw;
+  }
+  .panel-msg{
+    font-size:4vw;
+  }
+  
+} 
+
+/* ********************************************END OF QUIZ*********************** */
+/* ************************************PRODUCTS********************************** */
+
+#cont{
+  
+  width:100%;
+  display:flex;
+  overflow:hidden;
+}
+#products-row{
+  display:flex;
+  flex-wrap:wrap;
+  
+}
+#products-col{
+  margin-top:1vw;
+  width: 40vw;
+}
+#products-col img{
+  
+  width:20vw;
+  height:20vw;
+}
+#products-text h6{
+  font-size:1.1vw;
+  font-family: Nunito;
+  font-weight:bold;
+}
+#products-text p{
+  font-size:1.1vw;
+  font-family: Nunito;
+}
+#btn-cart{
+ 
+  border: 1px solid #F37E1C;
+  background-color: #ff9944;
+  border-radius: 4px !important;
+  font-family: 'headingBold';
+  font-size: 1.3vw;
+  font-weight: normal;
+  min-height: 3vw;
+  width: 90%;
+  color: #fff;
+}
+#btn-cart:hover{
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #F37E1C;
+
+}
+#orders{
+  margin-right: 2vw;
+}
+@media screen and (max-width:700px){
+  #products-row{
+    display:flex;
+    flex-wrap:wrap;
+    
+  }
+}
