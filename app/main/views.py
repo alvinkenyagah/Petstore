@@ -1,5 +1,6 @@
 from curses import flash
 from flask import render_template,abort,redirect, url_for,request
+from flask_login import login_required
 from . import main 
 
 
@@ -13,6 +14,7 @@ def index():
 
 
 @main.route('/quiz',methods=['GET','POST'])
+@login_required
 def quiz():
     return render_template('quiz.html')
 
