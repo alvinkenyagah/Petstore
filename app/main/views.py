@@ -208,9 +208,10 @@ def AddCart():
         return redirect(request.referrer)
 
 @main.route('/carts')
+@login_required
 def getCart():
     if 'Shoppingcart' not in session or len(session['Shoppingcart']) <= 0:
-        return redirect(url_for('home'))
+        return redirect(url_for('auth.login'))
     subtotal = 0
     grandtotal = 0
     for key,product in session['Shoppingcart'].items():

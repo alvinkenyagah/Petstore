@@ -1,38 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 /* ******************************navbar */
-/* .navbar {
-  padding: 0;
-  background-color: #bfcfff;
-}
-.navbar ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-.navbar li {
-  position: relative;
-}
-.navbar a, .navbar a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0 10px 24px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #000000;
-  white-space: nowrap;
-  transition: 0.3s;
-}
-.navbar a i, .navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-} */
-/* .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #ffb03b;
-} */
 
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
