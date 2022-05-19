@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends 'base.html'%}
+{%block content%}
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Bambi Petstore</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -25,8 +22,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.5/swiper-bundle.css" integrity="sha512-FaNMmVTIJuY9h9nJoygs85xfABCEB70VrFRwHgrSD0Eiw25Px+ehJZYzTDzrqnJjUoq3+XE7LkDvdPZWL/zAxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS File -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -39,21 +34,23 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#menu"></a></li>
-          <li><a class="nav-link scrollto" href="#specials"></a></li>
-          <li><a class="nav-link scrollto" href="#events"></a></li>
-          <li><a class="nav-link scrollto" href="#chefs"></a></li> -->
+  
           <li><a class="nav-link scrollto" href="/product">Products</a></li>
           <li><a class="nav-link scrollto" href="/quiz">Quiz</a></li>          
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="/carts">Cart</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
 
-      <a href="/authenticate/login" class="book-a-table-btn  animate__animated animate__shakeX animate__delay-4s">Get started</a>
+      {% if current_user.is_authenticated %}
+    <a href="/profile" class="book-a-table-btn">{{current_user.username}}</a>
+    <a href="{{url_for('auth.logout')}}" class="book-a-table-btn">Logout</a>
+    {% else %}
+    <a href="/authenticate/login" class="book-a-table-btn ">Get started</a>
+    {% endif %}
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -327,5 +324,4 @@
 );
     }
   </script>
-</body>
-</html>
+{%endblock%}
