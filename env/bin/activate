@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/moringa/Desktop/Petstore/env"
+VIRTUAL_ENV="/home/joy/Documents/Group/Petstore/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
