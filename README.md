@@ -25,7 +25,7 @@ This is a web application is meant to facilitates pets owners easily find the ba
 
 
 
-[Go Back to the top](#Bambi Petstore)
+
 
 ## Live link
 
@@ -40,7 +40,7 @@ This is a web application is meant to facilitates pets owners easily find the ba
 * PostgreSQL
 * Heroku
 
-[Go Back to the top](#Bambi Petstore)
+
 
 
 ## Known Bugs
@@ -50,7 +50,7 @@ This is a web application is meant to facilitates pets owners easily find the ba
 
 Copyright (c) 2022 MIT License. [View License Here](LICENSE)
 
-[Go Back to the top](#Bambi Petstore)
+
 
 ## Authors Info
 
@@ -68,4 +68,3 @@ Copyright (c) 2022 MIT License. [View License Here](LICENSE)
 * GitHub - [Victor Amiani](https://github.com/amianivictor)
 * Email address - [khahonjeri.amiani@student.moringaschool.com](mailto:khahonjeri.amiani@student.moringaschool.com)
 
-[Go Back to the top](#Bambi Petstore)
