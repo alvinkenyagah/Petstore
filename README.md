@@ -56,14 +56,15 @@ Copyright (c) 2022 MIT License. [View License Here](LICENSE)
 
 ### Alvin Kenyagah- Scrum Master
 * GitHub - [Alvin Kenyagah](https://github.com/alvinkenyagah)
+* Email address - [alvin47k@gmail.com](mailto:alvin47k@gmail.com)
 
 ### Joy Kimani- Contributor.
 * GitHub - [Joy Kimani](https://github.com/JoyChristine)
-
+* Email address - [joy.kimani@student.moringaschool.com](mailto:joy.kimani@student.moringaschool.com)
 ### Kevin Leitich- Contributor.
 * GitHub - [Kevin Leitich](https://github.com/kLeitich)
-
+* Email address - [kevin.leitich@student.moringaschool.com](mailto:kevin.leitich@student.moringaschool.com)
 ### Victor Amiani- Contributor.
 * GitHub - [Victor Amiani](https://github.com/amianivictor)
-
+* Email address - [khahonjeri.amiani@student.moringaschool.com](mailto:khahonjeri.amiani@student.moringaschool.com)
 [Go Back to the top](#Bambi Petstore)
