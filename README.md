@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="https://c.tenor.com/VpXcR-FH6GoAAAAj/mydoodlesateme-pomeranian.gif" width="244" height="180"/>
+  <img src="https://c.tenor.com/VpXcR-FH6GoAAAAj/mydoodlesateme-pomeranian.gif" width="244" height="98"/>
 </div>
 
 # Bambi Petstore
