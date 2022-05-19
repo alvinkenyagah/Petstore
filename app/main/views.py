@@ -155,7 +155,7 @@ def deletecat(id):
     return redirect(url_for('main.addcategory'))
 
 @main.route('/product')
-@login_required
+
 def product():
     page = request.args.get('page',1, type=int)
     products = Addproduct.query.filter(Addproduct.stock > 0).order_by(Addproduct.id.desc()).paginate(page=page, per_page=8)
@@ -180,6 +180,7 @@ def MagerDicts(dict1,dict2):
         return dict(list(dict1.items()) + list(dict2.items()))
 
 @main.route('/addcart', methods=['POST'])
+
 def AddCart():
     try:
         product_id = request.form.get('product_id')
@@ -208,7 +209,7 @@ def AddCart():
         return redirect(request.referrer)
 
 @main.route('/carts')
-@login_required
+
 def getCart():
     if 'Shoppingcart' not in session or len(session['Shoppingcart']) <= 0:
         return redirect(url_for('auth.login'))

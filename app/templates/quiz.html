@@ -18,29 +18,34 @@
   </head>
   <body>
     
-<header id="header" class=" d-flex align-items-center header-transparent bg-dark">
-  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-    <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-      <img src="https://lh3.googleusercontent.com/UCn7nAp9EOMNuBosMWMuGfeltNp7fz2iYABJJiejL86HsKXYOlweRu8fMcR69Itpuu7B4FqS_48BcOFeYGpMOElE_pUIr2dnExt2ahLWCPn0-L1Iideo8dL-WJFXOT-CheoTBjp0lA=w2400" alt="">
-      <h1 class="animate__animated animate__rubberBand animate__delay-2s">Bambi<span></span></h1>
-    </a>
-    <nav id="navbar" class="navbar order-last order-lg-0">
-      <ul>
-        <li><a class="nav-link scrollto active" href="/">Home</a></li>
-        <li><a class="nav-link scrollto" href="/">About</a></li>
-
-        <li><a class="nav-link scrollto" href="/product">Products</a></li>
-        <li><a class="nav-link scrollto" href="/quiz">Quiz</a></li>          
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-
-    <b href="/authenticate/login" class="book-a-table-btn  animate__animated animate__shakeX animate__delay-4s">Get Started</b>
-
-  </div>
-</header>
+    <header id="header" class="d-flex align-items-center header-transparent bg-dark">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    
+        <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+          <img src="https://lh3.googleusercontent.com/UCn7nAp9EOMNuBosMWMuGfeltNp7fz2iYABJJiejL86HsKXYOlweRu8fMcR69Itpuu7B4FqS_48BcOFeYGpMOElE_pUIr2dnExt2ahLWCPn0-L1Iideo8dL-WJFXOT-CheoTBjp0lA=w2400" alt="">
+          <h1 class="animate__animated animate__rubberBand animate__delay-2s">Bambi<span></span></h1>
+        </a>
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto active" href="/">Home</a></li>
+            <li><a class="nav-link scrollto" href="/">About</a></li>
+    
+            <li><a class="nav-link scrollto" href="/product">Products</a></li>
+            <li><a class="nav-link scrollto" href="/quiz">Quiz</a></li>          
+            <li><a class="nav-link scrollto" href="/carts">Cart</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    
+        {% if current_user.is_authenticated %}
+      <a href="/profile" class="book-a-table-btn">{{current_user.username}}</a>
+      <a href="{{url_for('auth.logout')}}" class="book-a-table-btn">Logout</a>
+      {% else %}
+      <a href="/authenticate/login" class="book-a-table-btn ">Get started</a>
+      {% endif %}
+    
+      </div>
+    </header>
 
     <main id="main">
       <div class="panel panel-default" id="quiz-title">
