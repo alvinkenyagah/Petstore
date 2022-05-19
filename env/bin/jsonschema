@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/home/joy/Documents/Group/Petstore/env/bin/python3
+=======
+#!/home/joy/Documents/Moringa-Core/week5/Petstore/env/bin/python3
+>>>>>>> 57b2862aabae80fdc62a7421598be3b15f597c3b
 # -*- coding: utf-8 -*-
 import re
 import sys

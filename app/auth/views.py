@@ -15,7 +15,7 @@ def register():
         db.session.add(user)
         db.session.commit()
 
-        mail_message("Welcome to Gallant Dev Blog","email/welcome_user",user.email,user=user)
+        # mail_message("Welcome to Gallant Dev Blog","email/welcome_user",user.email,user=user)
 
         return redirect(url_for('auth.login'))
         
