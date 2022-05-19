@@ -21,9 +21,9 @@ def index():
 def quiz():
     return render_template('quiz.html')
 
-@main.route('/product',methods=['GET','POST'])
-def product():
-    return render_template('products.html')
+# @main.route('/product',methods=['GET','POST'])
+# def product():
+#     return render_template('products.html')
 
 @main.route('/addcategory',methods=['GET','POST'])
 def addcategory():
@@ -65,7 +65,7 @@ def admin():
     print(products)
     return render_template('admin/index.html', title='Admin page',products=products)
 
-@main.route('/category')
+@main.route('/admin/category')
 def categories():
     categories = Category.query.order_by(Category.id.desc()).all()
     return render_template('admin/category.html', title='categories',categories=categories)
@@ -91,7 +91,7 @@ def updateproduct(id):
     form = Addproducts(request.form)
     product = Addproduct.query.get_or_404(id)
     categories = Category.query.all()
-    brand = request.form.get('brand')
+    
     category = request.form.get('category')
     if request.method =="POST":
         product.name = form.name.data 
@@ -101,7 +101,7 @@ def updateproduct(id):
         product.colors = form.colors.data
         product.desc = form.description.data
         product.category_id = category
-        product.brand_id = brand
+       
         if request.files.get('image_1'):
             try:
                 # os.unlink(os.path.join(current_app.root_path, "static/images/" + product.image_1))
@@ -123,13 +123,53 @@ def updateproduct(id):
 
         flash('The product was updated','success')
         db.session.commit()
-        return redirect(url_for('/admin'))
+        return redirect(url_for('main.admin'))
     form.name.data = product.name
     form.price.data = product.price
     form.discount.data = product.discount
     form.stock.data = product.stock
     form.colors.data = product.colors
     form.description.data = product.desc
-    brand = product.brand.name
     category = product.category.name
     return render_template('products/addproduct.html', form=form, title='Update Product',getproduct=product,categories=categories)
+
+
+@main.route('/deleteproduct/<int:id>', methods=['POST'])
+def deleteproduct(id):
+    product = Addproduct.query.get_or_404(id)
+    if request.method =="POST":
+        
+        db.session.delete(product)
+        db.session.commit()
+        flash(f'The product {product.name} was delete from your record','success')
+        return redirect(url_for('main.admin'))
+    flash(f'Can not delete the product','success')
+    return redirect(url_for('main.admin'))
+
+@main.route('/deletecat/<int:id>', methods=['GET','POST'])
+def deletecat(id):
+    category = Category.query.get_or_404(id)
+    if request.method=="POST":
+        db.session.delete(category)
+        flash(f"The brand {category.name} was deleted from your database","success")
+        db.session.commit()
+        return redirect(url_for('main.addcategory'))
+    flash(f"The brand {category.name} can't be  deleted from your database","warning")
+    return redirect(url_for('main.addcategory'))
+
+@main.route('/product')
+def product():
+    page = request.args.get('page',1, type=int)
+    products = Addproduct.query.filter(Addproduct.stock > 0).order_by(Addproduct.id.desc()).paginate(page=page, per_page=8)
+    return render_template('products/index.html', products=products,categories=categories())
+@main.route('/category/<int:id>')
+def get_category(id):
+    page = request.args.get('page',1, type=int)
+    get_cat = Category.query.filter_by(id=id).first_or_404()
+    get_cat_prod = Addproduct.query.filter_by(category=get_cat).paginate(page=page, per_page=8)
+    return render_template('products/index.html',get_cat_prod=get_cat_prod,categories=categories(),get_cat=get_cat)
+
+@main.route('/product/<int:id>')
+def single_page(id):
+    product = Addproduct.query.get_or_404(id)
+    return render_template('products/single_page.html',product=product,brands=brands(),categories=categories())
