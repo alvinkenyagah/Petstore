@@ -1,5 +1,32 @@
 {% extends 'base.html' %}
 {% block content%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<header id="header" class=" d-flex align-items-center header-transparent bg-dark">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+      <img src="https://lh3.googleusercontent.com/UCn7nAp9EOMNuBosMWMuGfeltNp7fz2iYABJJiejL86HsKXYOlweRu8fMcR69Itpuu7B4FqS_48BcOFeYGpMOElE_pUIr2dnExt2ahLWCPn0-L1Iideo8dL-WJFXOT-CheoTBjp0lA=w2400" alt="">
+      <h1 class="animate__animated animate__rubberBand animate__delay-2s">Bambi<span></span></h1>
+    </a>
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+        <li><a class="nav-link scrollto" href="/">About</a></li>
+        <!-- <li><a class="nav-link scrollto" href="#menu"></a></li>
+        <li><a class="nav-link scrollto" href="#specials"></a></li>
+        <li><a class="nav-link scrollto" href="#events"></a></li>
+        <li><a class="nav-link scrollto" href="#chefs"></a></li> -->
+        <li><a class="nav-link scrollto" href="/product">Products</a></li>
+        <li><a class="nav-link scrollto" href="/carts">Cart</a></li> 
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    
+
+  </div>
+</header>
+
 <div class="container mt-4">
     {% include '_messages.html' %}
     <div class="row">
@@ -25,7 +52,7 @@
                     <td>{{product.name}}</td>
                     <form action="{{url_for('main.updatecart', code=key)}}" method="post">
                     
-                    <td>${{"%.2f"|format(product.price)}}</td>
+                    <td>Kshs {{"%.2f"|format(product.price)}}</td>
                     <td> <input type="number" name="quantity" min="1" max="10" value="{{product.quantity}}"> </td>
                     {% if product.discount  %}
                     <td>{{product.discount}} % &nbsp; &nbsp; is {{"%.2f"|format(discount)}}</td>
@@ -33,7 +60,7 @@
                     <td></td>
                     {% endif %}
                     {% set subtotal = product.quantity|int * product.price|float  %}
-                    <td>${{"%.2f"|format(subtotal - discount|round(1,'floor')) }}</td>
+                    <td>Kshs {{"%.2f"|format(subtotal - discount|round(1,'floor')) }}</td>
                     <td><button type="submit" class="btn btn-sm btn-info">Update</button> </td>
                 </form>
                     <td> <a href="{{url_for('main.deleteitem', id=key)}}" class="btn btn-sm btn-danger">Delete</a></td>
@@ -45,8 +72,8 @@
            <tr>
                <td> <a href="#" class="btn btn-success"> Order now </a> </td>
                <td width="35%"></td>
-               <td> <h5>Tax: ${{tax}}</h5></td>
-               <td> <h5>Grand total: ${{grandtotal}}</h3> </td>
+               <td> <h5>Tax: Kshs {{tax}}</h5></td>
+               <td> <h5>Grand total: Kshs {{grandtotal}}</h3> </td>
                 <td> <a href="{{url_for('main.clearcart')}}" class="btn btn-danger btn-sm float-right mr-4"> Clear cart</a> </td>
            </tr>
         </table>

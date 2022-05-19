@@ -7,7 +7,7 @@
     <script type=text/javascript src="{{url_for('static', filename='js/script.js')}}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
    
-    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,6 +17,34 @@
     <title>Pet Quiz</title>
   </head>
   <body>
+    
+<header id="header" class=" d-flex align-items-center header-transparent bg-dark">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+      <img src="https://lh3.googleusercontent.com/UCn7nAp9EOMNuBosMWMuGfeltNp7fz2iYABJJiejL86HsKXYOlweRu8fMcR69Itpuu7B4FqS_48BcOFeYGpMOElE_pUIr2dnExt2ahLWCPn0-L1Iideo8dL-WJFXOT-CheoTBjp0lA=w2400" alt="">
+      <h1 class="animate__animated animate__rubberBand animate__delay-2s">Bambi<span></span></h1>
+    </a>
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+        <li><a class="nav-link scrollto" href="/">About</a></li>
+        <!-- <li><a class="nav-link scrollto" href="#menu"></a></li>
+        <li><a class="nav-link scrollto" href="#specials"></a></li>
+        <li><a class="nav-link scrollto" href="#events"></a></li>
+        <li><a class="nav-link scrollto" href="#chefs"></a></li> -->
+        <li><a class="nav-link scrollto" href="/product">Products</a></li>
+        <li><a class="nav-link scrollto" href="/quiz">Quiz</a></li>          
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  
+
+  </div>
+</header>
+
     <main id="main">
       <div class="panel panel-default" id="quiz-title">
         <h1>Let's match you with a new friend</h1>
@@ -136,12 +164,8 @@
           </form>
   
         </div>
-<<<<<<< HEAD
         <!--  -->
   <!-- -->
-=======
-  
->>>>>>> 57b2862aabae80fdc62a7421598be3b15f597c3b
         <div class="panel panel-default quiz results" id="dog" >
           <p class="panel-msg">Congratulations! You would make a great dog owner.</p>
           <img src="https://images.unsplash.com/photo-1628579606036-d2990d15a5ab?ixlib=rb-1.2.
@@ -155,7 +179,6 @@
           <p class="panel-msg">Congratulations! You would make a great rabbit owner.</p>
           <img src="https://images.unsplash.com/photo-1518796745738-41048802f99a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80">
         </div>
-<<<<<<< HEAD
         <div class="panel panel-default quiz results" id="parrot" width="50%">
           <p class="panel-msg">Congratulations! You would make a great parrot owner.</p>
           <img src="https://images.unsplash.com/photo-1604826010917-65cf53d6249b?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870 ">
@@ -164,8 +187,6 @@
           <p class="panel-msg">Congratulations! You would make a great fish owner.</p>
           <img src="https://images.unsplash.com/photo-1620126982158-efdf13080d94?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870">
         </div>
-=======
->>>>>>> 57b2862aabae80fdc62a7421598be3b15f597c3b
   
       </div>
     </main>
