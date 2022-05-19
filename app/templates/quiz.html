@@ -17,7 +17,7 @@
     <title>Pet Quiz</title>
   </head>
   <body>
-    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 <header id="header" class=" d-flex align-items-center header-transparent bg-dark">
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
@@ -34,16 +34,18 @@
         <li><a class="nav-link scrollto" href="#events"></a></li>
         <li><a class="nav-link scrollto" href="#chefs"></a></li> -->
         <li><a class="nav-link scrollto" href="/product">Products</a></li>
-        <li><a class="nav-link scrollto" href="/quiz">Quiz</a></li>          
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="nav-link scrollto" href="/carts">Cart ({{ session['Shoppingcart']|length }})</a></li> 
+        <!-- <li><a class="nav-link scrollto" href="/quiz">Quiz</a></li>          
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
-
-    <b href="/authenticate/login" class="book-a-table-btn  animate__animated animate__shakeX animate__delay-4s">Get Started</b>
+   
+    <a href="/authenticate/login" class="book-a-table-btn  animate__animated animate__shakeX animate__delay-4s">Get Started</a>
 
   </div>
 </header>
+
 
     <main id="main">
       <div class="panel panel-default" id="quiz-title">
