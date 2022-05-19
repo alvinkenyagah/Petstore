@@ -18,7 +18,7 @@
 ## Description
 
 This is a web application is meant to facilitates pets owners easily find the basic needs for their pets and also seek consultations concerning their pet welfare . [Powerpoint slides.](https://docs.google.com/presentation/d/1RqccBQOWLDmqyodjcmppOMw_SWrikClm9EavVq1KudA/edit#slide=id.gd5b09a965_5_0)
-[WEBSITE VIDEO DEMO.](https://drive.google.com/file/d/1ZWJGXqlg3fGdSvbm8RLHzgj0haBBlYKb/view)
+
 
 ## Installation 
 ### Requirements
