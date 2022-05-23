@@ -64,7 +64,3 @@ Copyright (c) 2022 MIT License. [View License Here](LICENSE)
 ### Kevin Leitich- Contributor.
 * GitHub - [Kevin Leitich](https://github.com/kLeitich)
 * Email address - [kevin.leitich@student.moringaschool.com](mailto:kevin.leitich@student.moringaschool.com)
-### Victor Amiani- Contributor.
-* GitHub - [Victor Amiani](https://github.com/amianivictor)
-* Email address - [khahonjeri.amiani@student.moringaschool.com](mailto:khahonjeri.amiani@student.moringaschool.com)
-
