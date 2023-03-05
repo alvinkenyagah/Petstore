@@ -4,12 +4,14 @@ from config import config_options
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail
+from flask_uploads import UploadSet,configure_uploads,IMAGES
 
 db = SQLAlchemy()
 bootstrap = Bootstrap()
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
+photos = UploadSet('photos',IMAGES)
 mail=Mail()
 
 def create_app(config_name):
@@ -17,6 +19,9 @@ def create_app(config_name):
    
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
+
+        # configure UploadSet
+    configure_uploads(app,photos)
 
 
     # Initializing flask extensions
